@@ -26,18 +26,18 @@ fn DialogCallback =
 pluginManager.loadClass FBXIMP;
 pluginManager.loadClass FBXEXP;
 
-openLog "C:/Users/ctobr/OneDrive/DOCUME~1/SERIOU~1/SERIOU~2/Mycosoft/Temp/3dsMax.log" mode:"w"
+openLog "C:/Users/adam_/DOCUME~1/Unity/Mycosoft/Temp/3dsMax.log" mode:"w"
 print "Start of log file."; flushLog();
 while true do
 (	
-	if ( fileExists "C:/Users/ctobr/OneDrive/DOCUME~1/SERIOU~1/SERIOU~2/Mycosoft/Temp/MaxCommandPipe" ) then
+	if ( fileExists "C:/Users/adam_/DOCUME~1/Unity/Mycosoft/Temp/MaxCommandPipe" ) then
 	(
 		exportNormals = false;
 		exportTangents = false;
 		bakeAnimations = false;
 		useFileUnits = false;
 	
-		waitpipe = (openFile "C:/Users/ctobr/OneDrive/DOCUME~1/SERIOU~1/SERIOU~2/Mycosoft/Temp/MaxCommandPipe" mode:"r");
+		waitpipe = (openFile "C:/Users/adam_/DOCUME~1/Unity/Mycosoft/Temp/MaxCommandPipe" mode:"r");
 		filename = (readLine waitpipe);
 		fbxFilename = (readline waitpipe);
 		
@@ -154,7 +154,7 @@ while true do
 					print "After fbx export"; flushLog();
 				)
 
-				deleteFile "C:/Users/ctobr/OneDrive/DOCUME~1/SERIOU~1/SERIOU~2/Mycosoft/Temp/MaxCommandPipe";
+				deleteFile "C:/Users/adam_/DOCUME~1/Unity/Mycosoft/Temp/MaxCommandPipe";
 				print "Finished max loading and fbx conversion"; flushLog();
 			) -- with defaultAction
 		)
