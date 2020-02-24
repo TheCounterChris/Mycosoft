@@ -26,18 +26,18 @@ fn DialogCallback =
 pluginManager.loadClass FBXIMP;
 pluginManager.loadClass FBXEXP;
 
-openLog "M:/GSA Unity/Mushroom Game/Mycosoft-master/Temp/3dsMax.log" mode:"w"
+openLog "C:/Users/ctobr/OneDrive/DOCUME~1/SERIOU~1/SERIOU~2/Mycosoft/Temp/3dsMax.log" mode:"w"
 print "Start of log file."; flushLog();
 while true do
 (	
-	if ( fileExists "M:/GSA Unity/Mushroom Game/Mycosoft-master/Temp/MaxCommandPipe" ) then
+	if ( fileExists "C:/Users/ctobr/OneDrive/DOCUME~1/SERIOU~1/SERIOU~2/Mycosoft/Temp/MaxCommandPipe" ) then
 	(
 		exportNormals = false;
 		exportTangents = false;
 		bakeAnimations = false;
 		useFileUnits = false;
 	
-		waitpipe = (openFile "M:/GSA Unity/Mushroom Game/Mycosoft-master/Temp/MaxCommandPipe" mode:"r");
+		waitpipe = (openFile "C:/Users/ctobr/OneDrive/DOCUME~1/SERIOU~1/SERIOU~2/Mycosoft/Temp/MaxCommandPipe" mode:"r");
 		filename = (readLine waitpipe);
 		fbxFilename = (readline waitpipe);
 		
@@ -154,7 +154,7 @@ while true do
 					print "After fbx export"; flushLog();
 				)
 
-				deleteFile "M:/GSA Unity/Mushroom Game/Mycosoft-master/Temp/MaxCommandPipe";
+				deleteFile "C:/Users/ctobr/OneDrive/DOCUME~1/SERIOU~1/SERIOU~2/Mycosoft/Temp/MaxCommandPipe";
 				print "Finished max loading and fbx conversion"; flushLog();
 			) -- with defaultAction
 		)

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Roystan_Toon Complete
+  m_Name: NeonBlueToon
   m_Shader: {fileID: 4800000, guid: 79cdb9d5d6a61224689156c69ebcad6a, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
